@@ -18,3 +18,18 @@
 .btn:hover {
     background-color: var(--accent);
 }
+header {
+    box-shadow: 0 2px 2px 2px whitesmoke;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+}
+
+p, a {
+    font-family: "Inter", sans-serif;
+}
+
+#search:focus {
+    outline: none;
+    border: none;
+}

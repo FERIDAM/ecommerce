@@ -6,26 +6,38 @@
     <title>eShopify</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
   <body>
     <header class="d-flex justify-content-between px-5 align-items-center py-3">
       <img src="./media/logo.png" alt="logo" class="logo">
-      <nav class="d-flex gap-5">
-        <a class="btn" href="">Home</a>
-        <a class="btn" href="">Shop</a>
-        <a class="btn" href="">About</a>
-        <a class="btn" href="">Contact</a>
+      <nav class="d-lg-flex gap-5 d-none">
+        <a class="nav-link" href="">Home</a>
+        <a class="nav-link" href="">Shop</a>
+        <a class="nav-link" href="">About</a>
+        <a class="nav-link" href="">Contact</a>
       </nav>
-      <div class="d-flex">
-        <div class="">
-          <p>Account</p>
-          <i class="bi bi-person-circle bg-dark"></i>
+      <div class="border d-flex border-1 border-dark rounded gap-1 px-2 py-1 w-25">
+        <i class="bi bi-search"></i>
+        <input type="search" name="search" id="search" placeholder="Search" class="border-0 w-75">
+      </div>
+      <div class="d-flex gap-4">
+        <div class="dropdown d-flex gap-2">
+          <i class="bi bi-person-circle"></i>
+          <span class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Account</span>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li><a class="dropdown-item" href="#">Sign-up</a></li>
+          </ul>
         </div>
-        <div>
-          <p>Cart</p>
+        <div class="d-flex gap-2 pe-2 position-relative">
+          <span>Cart</span>
           <i class="bi bi-cart4"></i>
+          <div class="badge bg-danger align-self-start rounded-pill position-absolute top-0 translate-middle start-100">1</div>
         </div>
       </div>
+
+
     </header>    
     <main></main>
     <section></section>
