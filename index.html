@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <header class="d-flex justify-content-between px-5 align-items-center py-3">
+    <header class="d-flex justify-content-between px-5 align-items-center py-3 position-fixed w-100 z-1 bg-light">
       <img src="./media/logo.png" alt="logo" class="logo">
       <nav class="d-lg-flex gap-5 d-none">
         <a class="nav-link" href="">Home</a>
@@ -51,7 +51,7 @@
                 <div class="d-flex align-items-center gap-2 border border-1 rounded px-3 position-relative">
                   <i class="bi bi-cart4"></i>
                   <div class="badge bg-danger align-self-start rounded-pill position-absolute top-0 translate-middle start-100">1</div>
-                  <button class="btn">Cart</button>
+                  <button class="btn" id="btn-primary">Cart</button>
                 </div>
               </div>
             </div>
@@ -73,8 +73,486 @@
             </div>
           </div>
     </header>    
-    <main></main>
-    <section></section>
+    <main>
+      <section class="row align-items-center container-fluid">
+        <div class="col-12 col-md-7 p-3 p-md-5">
+          <h1 class="fs-1 fw-bold">Everything you need, all in one place...</h1>
+          <p>Discover thousands of products across fashion, electronics, home, and more delivered straight to your door.</p>
+          <div class="d-flex gap-3">
+            <button class="btn btn-accent">Shop Now</button>
+            <button class="btn rounded border border-1">Explore Categories</button>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 hero-image-div">
+          <img src="./media/pexels-tessy-agbonome-521343232-16367693-removebg-preview.png" alt="shop" class="w-100 hero-image">
+        </div>
+      </section>
+      <section class="py-5 px-4 px-md-5">
+        <!-- Heading -->
+        <p class="text-uppercase letter-spacing mb-1" style="font-size: 11px; letter-spacing: 3px; color: var(--accent);">Browse</p>
+        <h2 class="fw-bold mb-1">Shop by Category</h2>
+        <p class="text-muted mb-5">Find exactly what you're looking for</p>
+
+        <!-- Grid -->
+        <div class="row g-3">
+
+          <!-- Fashion — large card -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded h-100 cat-card">
+              <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80" alt="Fashion & Clothing" class="w-100 h-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Trending</small>
+                <h5 class="fw-bold text-white mb-0">Fashion & Clothing</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electronics -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80" alt="Electronics" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">New arrivals</small>
+                <h5 class="fw-bold text-white mb-0">Electronics & Gadgets</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Home & Kitchen -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Home & Kitchen" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Popular</small>
+                <h5 class="fw-bold text-white mb-0">Home & Kitchen</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beauty -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80" alt="Beauty" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Bestsellers</small>
+                <h5 class="fw-bold text-white mb-0">Beauty & Personal Care</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sports -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&q=80" alt="Sports" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Active</small>
+                <h5 class="fw-bold text-white mb-0">Sports & Fitness</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Books -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=80" alt="Books" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Explore</small>
+                <h5 class="fw-bold text-white mb-0">Books & Stationery</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Watches & Accessories -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Watches & Accessories" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">Premium</small>
+                <h5 class="fw-bold text-white mb-0">Watches & Accessories</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toys & Kids -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="position-relative overflow-hidden rounded cat-card">
+              <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&q=80" alt="Toys & Kids" class="w-100 object-fit-cover">
+              <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <small class="text-uppercase d-block mb-1">For little ones</small>
+                <h5 class="fw-bold text-white mb-0">Toys & Kids</h5>
+                <a href="shop.html" class="text-decoration-none text-white small">Shop now →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+<!-- ══════════════════════════════════════
+     FEATURED / NEW ARRIVALS
+════════════════════════════════════════ -->
+<section class="py-5 px-4 px-md-5">
+  <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+    <div>
+      <p class="eyebrow mb-1" style="color: var(--accent);">Just dropped</p>
+      <div class="accent-line"></div>
+      <h2 class="mb-0" style="color: #1a1a1a;">New Arrivals</h2>
+    </div>
+    <a href="shop.html" class="btn btn-sm view-all-btn">View all →</a>
+  </div>
+
+  <div class="row g-3">
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" class="w-100" alt="Premium Watch">
+          <span class="badge badge-new position-absolute top-0 start-0 m-2">New</span>
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Watches</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Luxury Chronograph</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦85,000</span>
+            <span class="price-old" style="color: #999; text-decoration: line-through; font-size: 13px;">₦110,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500&q=80" class="w-100" alt="Perfume">
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Beauty</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Noir Essence Perfume</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦32,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80" class="w-100" alt="Sneakers">
+          <span class="badge badge-new position-absolute top-0 start-0 m-2">New</span>
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Fashion</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Elite Runner Sneakers</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦48,000</span>
+            <span class="price-old" style="color: #999; text-decoration: line-through; font-size: 13px;">₦60,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" class="w-100" alt="Headphones">
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Electronics</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Pro Wireless Headphones</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦65,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     PROMO BANNER
+════════════════════════════════════════ -->
+<section class="promo-banner">
+  <div class="position-relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1400&q=80" class="w-100" alt="Sale Banner">
+    <div class="promo-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="promo-content position-absolute top-50 start-0 translate-middle-y px-4 px-md-5">
+      <p class="eyebrow mb-2" style="color: var(--accent);">Limited time</p>
+      <h2 class="display-5 fw-bold mb-3" style="font-family: 'Playfair Display', serif; color: #ffffff;">End of Season<br>Sale</h2>
+      <p class="mb-4" style="color: #F5F0E8; font-size: 15px;">Up to 50% off across fashion, electronics, and home essentials.</p>
+      <a href="shop.html" class="btn btn-accent px-4 py-2">Shop the Sale</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     BEST SELLERS
+════════════════════════════════════════ -->
+<section class="py-5 px-4 px-md-5">
+  <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+    <div>
+      <p class="eyebrow mb-1" style="color: var(--accent);">Customer favourites</p>
+      <div class="accent-line"></div>
+      <h2 class="mb-0" style="color: #1a1a1a;">Best Sellers</h2>
+    </div>
+    <a href="shop.html" class="btn btn-sm view-all-btn">View all →</a>
+  </div>
+
+  <div class="row g-3">
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&q=80" class="w-100" alt="Loafers">
+          <span class="badge badge-sale position-absolute top-0 start-0 m-2">-30%</span>
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Fashion</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Classic Leather Loafers</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦42,000</span>
+            <span class="price-old" style="color: #999; text-decoration: line-through; font-size: 13px;">₦60,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80" class="w-100" alt="Tablet">
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Electronics</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Smart Tab Pro 11"</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦195,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=500&q=80" class="w-100" alt="Kitchen">
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Home</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Minimalist Kitchen Set</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦28,500</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="product-card rounded overflow-hidden border">
+        <div class="position-relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80" class="w-100" alt="Camera">
+          <span class="badge badge-sale position-absolute top-0 start-0 m-2">-20%</span>
+          <button class="wishlist-btn position-absolute"><i class="bi bi-heart"></i></button>
+        </div>
+        <div class="p-3">
+          <p class="cat-label mb-1" style="color: #888;">Electronics</p>
+          <h6 class="product-name mb-2" style="color: #1a1a1a;">Instant Film Camera</h6>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="price" style="color: var(--accent);">₦52,000</span>
+            <span class="price-old" style="color: #999; text-decoration: line-through; font-size: 13px;">₦65,000</span>
+          </div>
+          <button class="btn btn-cart w-100 py-2">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="py-5 px-4 px-md-5" style="background-color: #f8f8f8; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;">
+  <div class="text-center mb-5">
+    <p class="eyebrow mb-1" style="color: var(--accent);">What they say</p>
+    <div class="accent-line mx-auto"></div>
+    <h2 class="mb-0" style="color: #1a1a1a;">Customer Reviews</h2>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-4">
+      <div class="rounded p-4 border h-100" style="background: #ffffff; border-color: #e5e5e5 !important;">
+        <div class="stars mb-3" style="color: var(--accent);">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        <p class="mb-4" style="font-size: 14px; line-height: 1.7; color: #555;">"Ordered a watch and it arrived in perfect condition. The packaging alone felt premium. Will definitely be shopping here again."</p>
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=1" class="rounded-circle" width="40" height="40" alt="Adaeze">
+          <div>
+            <p class="mb-0" style="font-size:14px; font-weight:500; color: #1a1a1a;">Adaeze O.</p>
+            <p class="mb-0" style="font-size:12px; color: #888;">Lagos, Nigeria</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="rounded p-4 border h-100" style="background: #ffffff; border-color: #e5e5e5 !important;">
+        <div class="stars mb-3" style="color: var(--accent);">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        <p class="mb-4" style="font-size: 14px; line-height: 1.7; color: #555;">"Great selection of products and the prices are very fair. Delivery was faster than expected. The headphones I bought have amazing sound quality."</p>
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=3" class="rounded-circle" width="40" height="40" alt="Emeka">
+          <div>
+            <p class="mb-0" style="font-size:14px; font-weight:500; color: #1a1a1a;">Emeka T.</p>
+            <p class="mb-0" style="font-size:12px; color: #888;">Abuja, Nigeria</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="rounded p-4 border h-100" style="background: #ffffff; border-color: #e5e5e5 !important;">
+        <div class="stars mb-3" style="color: var(--accent);">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        <p class="mb-4" style="font-size: 14px; line-height: 1.7; color: #555;">"I've shopped on many platforms but eShopify stands out. Customer support was responsive and my return was handled without stress."</p>
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://i.pravatar.cc/40?img=5" class="rounded-circle" width="40" height="40" alt="Funmi">
+          <div>
+            <p class="mb-0" style="font-size:14px; font-weight:500; color: #1a1a1a;">Funmi A.</p>
+            <p class="mb-0" style="font-size:12px; color: #888;">Port Harcourt, Nigeria</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     NEWSLETTER
+════════════════════════════════════════ -->
+<section class="py-5 px-4 px-md-5 text-center" style="background-color: #1a1a1a;">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <p class="eyebrow mb-1" style="color: var(--accent);">Stay in the loop</p>
+      <div class="accent-line mx-auto"></div>
+      <h2 class="mb-2" style="color: #ffffff;">Join Our List</h2>
+      <p class="mb-4" style="color: #B0B0B0;">Get exclusive deals, new arrivals, and member-only discounts delivered straight to your inbox.</p>
+      <div class="input-group">
+        <input type="email" class="form-control newsletter-input py-3 px-3" placeholder="Enter your email address">
+        <button class="btn btn-accent px-4">Subscribe</button>
+      </div>
+      <p class="mt-3" style="font-size:12px; color: #666;">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="pt-5 pb-3 px-4 px-md-5" style="background-color: #111111; border-top: 1px solid #2a2a2a;">
+  <div class="row g-4 pb-4">
+
+    <div class="col-12 col-md-4">
+      <h4 class="mb-3" style="font-family: 'Playfair Display', serif; letter-spacing: 2px; color: #ffffff;">eShopify</h4>
+      <p style="font-size:13px; line-height:1.8; max-width:280px; color: #B0B0B0;">Your one-stop destination for fashion, electronics, home essentials, and more. Quality products, delivered fast.</p>
+      <div class="d-flex gap-2 mt-4">
+        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <p class="footer-heading">Shop</p>
+      <a href="shop.html" class="footer-link">New Arrivals</a>
+      <a href="shop.html" class="footer-link">Best Sellers</a>
+      <a href="shop.html" class="footer-link">Fashion</a>
+      <a href="shop.html" class="footer-link">Electronics</a>
+      <a href="shop.html" class="footer-link">Sale</a>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <p class="footer-heading">Company</p>
+      <a href="about.html" class="footer-link">About Us</a>
+      <a href="contact.html" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">Careers</a>
+      <a href="#" class="footer-link">Blog</a>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <p class="footer-heading">Support</p>
+      <a href="#" class="footer-link">FAQs</a>
+      <a href="#" class="footer-link">Track Order</a>
+      <a href="#" class="footer-link">Returns</a>
+      <a href="#" class="footer-link">Shipping Info</a>
+    </div>
+
+    <div class="col-6 col-md-2">
+      <p class="footer-heading">Contact</p>
+      <p class="footer-link"><i class="bi bi-envelope me-2"></i>hello@eshopify.ng</p>
+      <p class="footer-link"><i class="bi bi-telephone me-2"></i>+234 800 000 0000</p>
+      <p class="footer-link"><i class="bi bi-geo-alt me-2"></i>Lagos, Nigeria</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom pt-3 d-flex flex-wrap justify-content-between align-items-center gap-2" style="border-top: 1px solid #2a2a2a;">
+    <p class="mb-0" style="font-size:12px; color: #666;">© 2026 eShopify. All rights reserved.</p>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-decoration-none" style="font-size:12px; color: #666;">Privacy Policy</a>
+      <a href="#" class="text-decoration-none" style="font-size:12px; color: #666;">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+    </main>
+    <section>
+
+    </section>
     <footer></footer>
 
 
